@@ -1,27 +1,3 @@
-"""
-TOOLS LAB - Learn every concept through code.
-
-HOW TO USE:
-  Step 1 - No API key needed (offline):
-    section_1_basic_tool()
-    section_2_custom_name_description()
-    section_3_pydantic_schema()
-    section_4_what_model_sees()
-    section_5_return_types()
-    section_6_inspect_tool_properties()
-
-  Step 2 - Needs OPENAI_API_KEY:
-    section_7_bind_tools_to_model()
-    section_8_manual_tool_call_loop()
-    section_9_return_direct_in_action()
-    section_10_multiple_tools_model_picks()
-
-Run one section at a time.
-Set OPENAI_API_KEY in terminal first:
-  Windows:  $env:OPENAI_API_KEY="sk-..."
-  Mac/Linux: export OPENAI_API_KEY="sk-..."
-"""
-
 import json
 from langchain.tools import tool
 from langchain_core.utils.function_calling import convert_to_openai_tool
