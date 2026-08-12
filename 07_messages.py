@@ -1,6 +1,9 @@
 from langchain.chat_models import init_chat_model
 from langchain.messages import HumanMessage, AIMessage, SystemMessage, ToolMessage
-MODEL_NAME = "gpt-40-mini"
+import os
+from dotenv import load_dotenv
+load_dotenv()
+MODEL_NAME = "gpt-4o-mini"
 
 def get_model():
     return init_chat_model(MODEL_NAME)
@@ -64,7 +67,7 @@ def section_4b():
     model = get_model()
     ai_msg = AIMessage("I'd be happy to help you with that question!")
     messages = [
-        SSystemMessage("You are a helpful assistant"),
+        SystemMessage("You are a helpful assistant"),
         HumanMessage("Can you help me?"),
         ai_msg,
         HumanMessage("Great! What's 2+2?")
@@ -174,3 +177,16 @@ def section_9():
     )
     print("content sent to model:", tool_message.content)
     print("artifact kept for your app only:", tool_message.artifact)
+
+
+if __name__ == "__main__":
+    # section_1()
+    # section_2()
+    # section_3()
+    # section_4a()
+    # section_4b()
+    # section_5()
+    # section_6()
+    # section_7()
+    # section_8()
+    section_9()
