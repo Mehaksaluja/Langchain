@@ -2,6 +2,9 @@ from pydantic import BaseModel, Field
 from typing import Literal, Optional
 from typing_extensions import TypedDict
 import json
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
 
 # =============================================================================
@@ -346,10 +349,10 @@ def section_7_include_raw():
 # =============================================================================
 
 if __name__ == "__main__":
-    section_1_pydantic_basics()
-    section_2_richer_schemas()
-    section_3_typeddict()
-    # section_4_with_structured_output()
-    # section_5_real_usecase_extraction()
-    # section_6_typeddict_with_model()
-    # section_7_include_raw()
+    # section_1_pydantic_basics()
+    # section_2_richer_schemas()
+    # section_3_typeddict()
+    section_4_with_structured_output()
+    section_5_real_usecase_extraction()
+    section_6_typeddict_with_model()
+    section_7_include_raw()
